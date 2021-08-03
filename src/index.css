@@ -1,0 +1,198 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.nonexistent {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+}
+html .code, html .console, html h2 {
+  font-family: monospace;
+  font-size: 1.2em;
+}
+html h2 {
+  font-size: 1.7em;
+  margin-top: 0;
+}
+html pre {
+  margin: 0;
+}
+html #main {
+  margin-top: calc(50vh - 50px);
+  text-align: center;
+  transition: margin-top 0.5s 0.25s;
+}
+html #main #extension {
+  display: block;
+  opacity: 0;
+  max-height: 0;
+  transition: 0.75s;
+  text-align: center;
+  overflow: hidden;
+}
+html #main #extension .card {
+  vertical-align: top;
+  text-align: left;
+  margin: 15px;
+  padding: 10px;
+  width: 650px;
+  max-width: calc(100% - 30px);
+  display: inline-block;
+}
+html #main #extension .card a {
+  color: white;
+}
+html #main #extension .card ul {
+  line-height: 2em;
+}
+html #main #extension .card span.example-header {
+  padding: 5px;
+  z-index: 1;
+  display: inline-block;
+  margin-left: 4px;
+}
+html #main #extension .card .console {
+  margin-top: -13px;
+  padding: 10px;
+  overflow-x: auto;
+}
+html #main #extension .card table {
+  margin-left: auto;
+  margin-right: auto;
+}
+html #main #extension .card table td {
+  padding: 5px;
+}
+html #main #extension .doublewide {
+  width: 1330px;
+}
+html #main label {
+  font-size: 1.3em;
+  overflow: hidden;
+  text-overflow: clip;
+  display: inline-block;
+  transition: 0.25s;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  color: #777;
+}
+html #main label::after {
+  content: "-";
+  font-size: 0;
+  position: absolute;
+  bottom: calc(50% - 2px);
+  height: 0px;
+  width: 3px;
+  background: grey;
+  transition: width 0.25s 0.25s, height 0.25s, bottom 0.25s, background 0.5s, padding 0.25s;
+  left: 0%;
+  display: block;
+}
+html #main label:hover {
+  color: white;
+}
+html #main label:hover::after {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: -1;
+  color: white;
+  bottom: 0;
+}
+html #main #extend {
+  max-width: 22em;
+}
+html #main #retract {
+  max-width: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+html #extender:checked + #main {
+  margin-top: 50px;
+  transition-delay: 0s;
+}
+html #extender:checked + #main #extend {
+  max-width: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+html #extender:checked + #main #retract {
+  max-width: 60px;
+  padding: 5px;
+}
+html #extender:checked + #main #extension {
+  display: block;
+  opacity: 1;
+  max-height: 2000px;
+  transition-delay: 0.25s;
+}
+html #extender:checked + #main #extension .request {
+  color: green;
+}
+html #extender:checked + #main #extension .response {
+  color: red;
+}
+@media (prefers-color-scheme: light) {
+  html {
+    background: white;
+    color: black;
+  }
+  html #main label {
+    color: #555;
+  }
+  html #main label:hover {
+    color: white;
+  }
+  html #main label:hover::after {
+    background: black;
+  }
+  html #main .card span.example-header {
+    background: white;
+    font-size: 0;
+  }
+  html #main .card .console {
+    font-family: monospace;
+  }
+  html #main .card .console div {
+    padding: 2px;
+  }
+  html #main .card .console .request {
+    color: green;
+  }
+  html #main .card .console .response {
+    color: red;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    background: #131516;
+    color: #d8d4cf;
+  }
+  html #main label {
+    color: #CCC;
+  }
+  html #main label:hover {
+    color: black;
+  }
+  html #main label:hover::after {
+    background: white;
+  }
+  html #main .card .console {
+    font-family: monospace;
+  }
+  html #main .card .console div {
+    padding: 2px;
+  }
+  html #main .card .console .request {
+    color: #72ff72;
+  }
+  html #main .card .console .response {
+    color: #ff1a1a;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

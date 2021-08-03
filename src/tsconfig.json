@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "none",
+    "target": "es2019",
+    "sourceMap": true,
+    "outFile": "../compiled/index.js",
+    "lib": ["ES2020", "WebWorker"],
+    "types": ["@cloudflare/workers-types"]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

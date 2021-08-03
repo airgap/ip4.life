@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your IP: %%ip%%</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://r.ip4.life/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://r.ip4.life/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://r.ip4.life/favicon-16x16.png">
+    <link rel="manifest" href="https://r.ip4.life/site.webmanifest">
+    <link rel="mask-icon" href="https://r.ip4.life/safari-pinned-tab.svg" color="#b17fff">
+    <link rel="shortcut icon" href="https://r.ip4.life/favicon.ico">
+    <meta name="msapplication-TileColor" content="#b17fff">
+    <meta name="msapplication-config" content="https://r.ip4.life/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- social -->
+    <meta property="og:image:height" content="504">
+    <meta property="og:image:width" content="963">
+    <meta property="og:title" content="IP 4 Life">
+    <meta property="og:description" content="Minimalistic, ad-free IP address detector">
+    <meta property="og:url" content="https://ip.life">
+    <meta property="og:image" content="https://r.ip4.life/og-image.jpg">
+    <!-- /social -->
+    <style></style>
+</head>
+<body>
+<input type="checkbox" class="nonexistent" id="extender">
+<div id="main">
+    <h1>Your IP address is <span class="code">%%ip%%</span></h1>
+    <label for="extender" id="extend">curl,&nbsp;json,&nbsp;and&nbsp;xml&nbsp;usage</label>
+    <label for="extender" id="retract">Hide</label>
+    <div id="extension">
+        <!--<div class="card doublewide">
+            <h1>API Endpoints</h1>
+        </div>-->
+        <div class="card">
+            <h2>/v4</h2>
+            <p>Returns your IPv4 address if available</p>
+            <span class="example-header">Example</span>
+            <div class="console code">
+                <div class="request">-> curl -s https://ip4.life/v6</div>
+                <div class="response">&lt;- 69.243.32.35</div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>/v6</h2>
+            <p>Returns your IPv6 address</p>
+            <span class="example-header">Example</span>
+            <div class="console code">
+                <div class="request">-> curl -s https://ip4.life/v4</div>
+                <div class="response">&lt;- 2601:14c:8300:6970:a001:cba9:b541:305</div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>/auto</h2>
+            <p>Returns your IPv4 address if available, otherwise returns your IPv6 address</p>
+            <span class="example-header">Example</span>
+            <div class="console code">
+                <div class="request">-> curl -s https://ip4.life/auto</div>
+                <div class="response">&lt;- 69.243.32.35</div>
+                <div class="request">-> curl -s https://ip4.life/auto</div>
+                <div class="response">&lt;- 2601:14c:8300:6970:a001:cba9:b541:305</div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>/json</h2>
+            <p>Returns a JSON object containing your IPv4 address if available and your IPv6 address</p>
+            <span class="example-header">Example</span>
+            <div class="console code">
+                <div class="request">-> curl -s https://ip4.life/json</div>
+                <div class="response">
+                    <pre>&lt;- {
+       "v4": "69.243.32.35",
+       "v6": "::ffff:69.243.32.35"
+   }</pre>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>/xml</h2>
+            <p>Returns an XML object containing your IPv4 address if available and your IPv6 address</p>
+            <span class="example-header">Example</span>
+            <div class="console code">
+                <div class="request">-> curl -s https://ip4.life/xml</div>
+                <div class="response">
+                    <pre>&lt;- &lt;?xml version="1.0" encoding="UTF-8"?>
+   &lt;addresses>
+       &lt;v4>69.243.32.35&lt;/v4>
+       &lt;v6>::ffff:69.243.32.35&lt;/v6>
+   &lt;/addresses></pre>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Fun facts</h2>
+            <ul>
+                <li>There is no JavaScript in this page. The dropdown button is pure CSS</li>
+                <li>All pages and assets are served directly from RAM</li>
+                <li>This site follows your device's Dark Mode</li>
+                <li>Hosted on <a href="https://m.do.co/c/4803cd96bf0f" target="_blank">DigitalOcean</a> and <a href="https://www.cloudflare.com/">Cloudflare</a></li>
+                <li><!--fact--></li>
+                <li>If you're feeling generous, you can kick me a buck <a href="https://www.paypal.com/donate?hosted_button_id=8T6MR5SGYCEV4" target="_blank">here</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
