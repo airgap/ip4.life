@@ -1,8 +1,7 @@
 import { readFile, writeFile } from 'fs/promises';
 import * as mkdirp from 'mkdirp';
 import * as rimraf from 'rimraf';
-
-(async () => {
+export const inject = async () => {
     const [html, facts, script, style] = await Promise.all([
         ...[
             'src/index.html',
@@ -19,4 +18,10 @@ import * as rimraf from 'rimraf';
         .replace('<style></style>', `<style>${style}</style>`);
     await writeFile('dist/index.js', out);
     rimraf('compiled', () => { });
-})();
+};
+
+try {
+    inject();
+} catch (ex) {
+    console.error('Injection failed.', ex);
+}
