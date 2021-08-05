@@ -57,7 +57,7 @@ async function handleRequest(request: any) {
     };
     const format = responses[url.substr(1)];
     return new Response(format?.body ?? (
-        url.match(/^\/v[0-9]+$/)
+        /^\/v[0-9]+$/.test(url)
             ? 'u wot m8'
             : `<h1 style="font-family: monospace">404, Page not found...sorry m8</h1>`
     ), {
