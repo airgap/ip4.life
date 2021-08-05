@@ -2,7 +2,7 @@ import { readFile, writeFile } from 'fs/promises';
 import * as mkdirp from 'mkdirp';
 import * as rimraf from 'rimraf';
 export const inject = async () => {
-    const [html, facts, script, style] = await Promise.all([
+    const [html, facts, script, style]: string[] = await Promise.all([
         ...[
             'src/index.html',
             'src/facts.txt',
