@@ -9,7 +9,7 @@
     "build": "cd src && tsc && cd .. && ts-node inject.ts"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^2.1.0",
+    "@cloudflare/workers-types": "^2.2.2",
     "@types/mkdirp": "^1.0.2",
     "@types/node": "^14.14.21",
     "@types/rimraf": "^3.0.1",
