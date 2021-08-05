@@ -20,8 +20,4 @@ export const inject = async () => {
     rimraf('compiled', () => { });
 };
 
-try {
-    inject();
-} catch (ex) {
-    console.error('Injection failed.', ex);
-}
+inject().catch(ex => console.error('Injection failed.', ex));
