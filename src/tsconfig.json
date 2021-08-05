@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
     "module": "none",
-    "target": "es2019",
+    "target": "esnext",
     "sourceMap": true,
     "outFile": "../compiled/index.js",
     "lib": ["ES2020", "WebWorker"],
-    "types": ["@cloudflare/workers-types"]
+    "types": ["@cloudflare/workers-types"],
+    "strict": true,
+    "noImplicitAny": true
   },
   "exclude": [
     "node_modules"
