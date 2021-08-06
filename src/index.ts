@@ -2,10 +2,6 @@ const facts: string[] = [/*facts*/];
 
 const html = `/*html*/`;
 
-addEventListener('fetch', (event: FetchEvent) => {
-    event.respondWith(handleRequest(event.request))
-})
-
 /**
  * Respond to the request
  * @param {Request} request
@@ -65,3 +61,7 @@ async function handleRequest(request: Request) {
         headers: { "content-type": `text/${format?.type ?? 'html'};charset=UTF-8` }
     })
 }
+
+addEventListener('fetch', (event: FetchEvent) => {
+    event.respondWith(handleRequest(event.request))
+})
