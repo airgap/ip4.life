@@ -1,20 +1,26 @@
 {
-  "name": "ip alpha",
+  "name": "ip4-life",
   "version": "0.0.0",
   "lib": [
     "ES2020",
     "WebWorker"
   ],
   "scripts": {
-    "build": "cd src && tsc && cd .. && ts-node inject.ts"
+    "build": "./build.sh",
+    "clean": "./clean.sh"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^2.2.2",
     "@types/mkdirp": "^1.0.2",
-    "@types/node": "^14.14.21",
+    "@types/node": "^14.17.9",
     "@types/rimraf": "^3.0.1",
     "mkdirp": "^1.0.4",
     "rimraf": "^3.0.2",
+    "sass": "^1.37.5",
     "ts-node": "^9.1.1"
-  }
+  },
+  "engines": {
+    "node": "^16"
+  },
+  "engineStrict": true
 }

@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "module": "CommonJS",
-    "target": "esnext",
-    "sourceMap": true,
+    "target": "ESNext",
+    "sourceMap": false,
     "outDir": "../compiled/",
     "lib": ["ES2020", "WebWorker"],
-    "types": ["@cloudflare/workers-types"],
+    "types": ["@cloudflare/workers-types", "node"],
     "strict": true,
     "noImplicitAny": true
   },
