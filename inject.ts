@@ -17,7 +17,9 @@ export const inject = async () => {
         .replace('/*html*/', html)
         .replace('<style></style>', `<style>${style}</style>`);
     await writeFile('dist/index.js', out);
-    rimraf('compiled', () => { });
+    rimraf('compiled', () => {
+        // Do nothing
+    });
 };
 
 inject().catch(ex => console.error('Injection failed.', ex));
