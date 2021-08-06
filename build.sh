@@ -14,7 +14,7 @@ cd src || exit
 
 # Compile TypeScript and Sass
 tsc
-sass index.sass ../compiled/index.css
+sass index.sass ../compiled/index.css || exit 1
 
 cd .. || exit
 
